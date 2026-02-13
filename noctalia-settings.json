@@ -631,6 +631,45 @@
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "favorites": [
+            {
+                "colorScheme": "Noctalia (default)",
+                "darkMode": true,
+                "generationMethod": "tonal-spot",
+                "paletteColors": [
+                    "#aac7ff",
+                    "#bec6dc",
+                    "#dcbce0",
+                    "#ffb4ab"
+                ],
+                "path": "/home/xrayya/WindowsD/Backup/Anime & Digital Art Wallpaper/Frieren.png",
+                "useWallpaperColors": true
+            },
+            {
+                "colorScheme": "Noctalia (default)",
+                "darkMode": true,
+                "generationMethod": "tonal-spot",
+                "paletteColors": [
+                    "#ffb3b1",
+                    "#e6bdbb",
+                    "#e4c18d",
+                    "#ffb4ab"
+                ],
+                "path": "/home/xrayya/WindowsD/Backup/Anime & Digital Art Wallpaper/wallpaperflare.com_wallpaper 11.jpg",
+                "useWallpaperColors": true
+            },
+            {
+                "colorScheme": "Noctalia (default)",
+                "darkMode": true,
+                "generationMethod": "tonal-spot",
+                "paletteColors": [
+                    "#62dbb7",
+                    "#b2ccc1",
+                    "#a8cbe2",
+                    "#ffb4ab"
+                ],
+                "path": "/home/xrayya/WindowsD/Backup/Anime & Digital Art Wallpaper/wallpaperflare.com_wallpaper2.jpg",
+                "useWallpaperColors": true
+            }
         ],
         "fillColor": "#000000",
         "fillMode": "crop",
