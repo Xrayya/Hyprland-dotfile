@@ -36,6 +36,7 @@ env = HYPRCURSOR_SIZE,20
 exec-once = dbus-update-activation-environment --systemd --all
 exec-once = systemctl --user import-environment QT_QPA_PLATFORMTHEME
 exec-once = /usr/lib/polkit-kde-authentication-agent-1
+exec-once = hyprsunset
 
 # ==================
 # INPUT CONFIG
@@ -165,15 +166,48 @@ bind = SUPER_SHIFT, 0, movetoworkspace, 10
 bind = SUPER, F, fullscreen, 1
 bind = SUPER_ALT, F, togglefloating, 
 
+bind = SUPER, left, movefocus, l
+bind = SUPER, down, movefocus, d
+bind = SUPER, up, movefocus, u
+bind = SUPER, right, movefocus, r
 bind = SUPER, H, movefocus, l
 bind = SUPER, J, movefocus, d
 bind = SUPER, K, movefocus, u
 bind = SUPER, L, movefocus, r
 
+bind = SUPER_SHIFT, left, swapwindow, l
+bind = SUPER_SHIFT, right, swapwindow, r
+bind = SUPER_SHIFT, up, swapwindow, u
+bind = SUPER_SHIFT, down, swapwindow, d
 bind = SUPER_SHIFT, H, swapwindow, l
 bind = SUPER_SHIFT, L, swapwindow, r
 bind = SUPER_SHIFT, K, swapwindow, u
 bind = SUPER_SHIFT, J, swapwindow, d
+
+bind = SUPER CTRL, left, focusmonitor, l
+bind = SUPER CTRL, right, focusmonitor, r
+bind = SUPER CTRL, H, focusmonitor, l
+bind = SUPER CTRL, J, focusmonitor, d
+bind = SUPER CTRL, K, focusmonitor, u
+bind = SUPER CTRL, L, focusmonitor, r
+
+bind = SUPER SHIFT CTRL, left, movewindow, mon:l
+bind = SUPER SHIFT CTRL, down, movewindow, mon:d
+bind = SUPER SHIFT CTRL, up, movewindow, mon:u
+bind = SUPER SHIFT CTRL, right, movewindow, mon:r
+bind = SUPER SHIFT CTRL, H, movewindow, mon:l
+bind = SUPER SHIFT CTRL, J, movewindow, mon:d
+bind = SUPER SHIFT CTRL, K, movewindow, mon:u
+bind = SUPER SHIFT CTRL, L, movewindow, mon:r
+
+bind = SUPER, Page_Down, workspace, e+1
+bind = SUPER, Page_Up, workspace, e-1
+bind = SUPER, U, workspace, e+1
+bind = SUPER, I, workspace, e-1
+bind = SUPER SHIFT, down, movetoworkspace, e+1
+bind = SUPER SHIFT, up, movetoworkspace, e-1
+bind = SUPER SHIFT, U, movetoworkspace, e+1
+bind = SUPER SHIFT, I, movetoworkspace, e-1
 
 gesture = 3, horizontal, workspace
 
@@ -183,6 +217,8 @@ bind = SUPER, E, exec, ~/.config/hypr/scripts/open-default-file-manager.sh
 
 bindm = SUPER, mouse:272, movewindow
 bindm = SUPER_CTRL, mouse:272, resizewindow
+
+bind = SUPER_SHIFT, S, exec, grim -g "$(slurp)" -t ppm - | satty --filename - --output-filename ~/Pictures/Screenshots/Screenshot-$(date '+%Y%m%d-%H:%M:%S').png 
 
 # ==================
 # PLUGINS
