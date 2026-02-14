@@ -67,10 +67,6 @@
         "widgets": {
             "center": [
                 {
-                    "iconColor": "none",
-                    "id": "WallpaperSelector"
-                },
-                {
                     "compactMode": true,
                     "compactShowAlbumArt": true,
                     "compactShowVisualizer": false,
@@ -148,6 +144,10 @@
                 }
             ],
             "right": [
+                {
+                    "iconColor": "none",
+                    "id": "WallpaperSelector"
+                },
                 {
                     "blacklist": [
                     ],
